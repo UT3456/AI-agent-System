@@ -1,0 +1,8 @@
+# OpenAI provider settings (activated when AI_PROVIDER=openai)
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:default-key}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com}
+      chat:
+        model: ${OPENAI_CHAT_MODEL:gpt-4o-mini}

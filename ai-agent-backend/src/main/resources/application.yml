@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ai-agent-backend
+
+  # Pick the AI provider at startup:
+  #   AI_PROVIDER=openai -> OpenAI (gpt-4o-mini by default)
+  #   AI_PROVIDER=grok   -> xAI Grok via its OpenAI-compatible endpoint
+  # Provider-specific api-key / base-url / model live in
+  # application-openai.yml and application-grok.yml.
+  profiles:
+    active: ${AI_PROVIDER:openai}

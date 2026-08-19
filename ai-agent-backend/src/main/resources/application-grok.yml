@@ -1,0 +1,10 @@
+# xAI Grok provider settings (activated when AI_PROVIDER=grok).
+# Grok exposes an OpenAI-compatible API, so the same OpenAI-compatible client
+# is pointed at api.x.ai/v1. Create a key at https://console.x.ai/
+spring:
+  ai:
+    openai:
+      api-key: ${GROK_API_KEY:default-key}
+      base-url: ${GROK_BASE_URL:https://api.x.ai/v1}
+      chat:
+        model: ${GROK_CHAT_MODEL:grok-4.6}
